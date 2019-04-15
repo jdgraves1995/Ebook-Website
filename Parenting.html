@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1{
+            text-align:center;
+        }
+
+        h2{
+            text-align:center;
+            font-style:italic;
+            font-size:40px;
+        }
+        .special{
+            background-color:#b8b8b8;
+        }
+        table.center{
+            /*The center alignement does not show up in split mode. It takes effect in browser*/
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .a{
+            /*The width effect does not show up in split mode. It takes effect in browser*/
+            width: 35px;
+            color: blue;
+            text-decoration: underline;
+        }
+         table{
+            border-style:inset;
+            border-width:thick;
+            border-color:gray;
+            border-width:15px;
+        }
+
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body class="special">
+    <h1>Parenting E-Book Collection</h1><br />
+    <h2>Select One Today!</h2><br />
+    <table class="center" border="1">
+        <tr>
+            <td><img src="images/expect.jpg" /></td>
+            <td class ="a"><a href="http://localhost:8090/processProduct.php?id_no=4&desc=A+Health+and+Excercise+Guide+for+Expecting+Mothers">What<br /> to <br /> Expect <br /></a></td>
+            <td><img src="images/expect1.jpg" /></td>
+            <td class ="a"><a href="http://localhost:8090/processProduct.php?id_no=5&desc=A+Health+and+Excercise+Guide+for+Mothers+in+their+First+Year"><br />First<br />Year<br /></a></td>
+        </tr>
+        <tr>
+            <td><img src="images/Mama.jpg" /></td>
+            <td class="a"><a href="http://localhost:8090/processProduct.php?id_no=6&desc=Become+a+Multi+Tasking+Mama+with+Less+Stress">Hands<br />Free<br />Mama</a></td>
+            <td><img src="images/talk.jpg" /></td>
+            <td class="a"><a href="http://localhost:8090/processProduct.php?id_no=7&desc=A+Guide+to+Communicating+with+Your+Children">Talk<br />To<br />Kids</a></td>
+        </tr>
+    </table><br />
+   <p align ="center"> <a href="store_index.html">Continue Shopping</a></p>
+</body>
+</html>

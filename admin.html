@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="admin.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form action="http://localhost:8090/process.php?XDEBUG_SESSION_START=test2" method="post" enctype="multipart/form-data">
+        <h1>Administrative Blog Form</h1>
+        <div class="div1">
+            <div class="innerdiv1"><label>Name:</label><input type="text" name="text1" class="text1" /></div>
+            <div class="innerdiv1"><label>Title:</label><input type="text" name="text2" class="text1" /></div>
+            <div class="innerdiv1"><label>Image:</label><input type="file" name="file" class="text1" /></div>
+
+        </div>
+        <h3>Enter Blog Below</h3>
+        <div class="div2">
+            <textarea class="text2" rows="2" cols="20" name="area" wrap="soft"></textarea>
+            <div class="reset"><input type="reset" value="Reset"/></div>
+            <div class="submit"><input type="submit" value="Submit" /></div>
+        </div>
+    </form>
+</body>
+</html>

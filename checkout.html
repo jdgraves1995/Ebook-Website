@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="JavaScript.js"></script>
+    <style>
+        h1{
+            text-align:center;
+        }
+        .special{
+            background-color:#b8b8b8;
+            content:box;
+            
+        }
+
+        .special2{
+            width: 75%;
+            margin: 0 auto;
+            text-align:center;
+    
+        }
+        .special3{
+            padding:20px;
+            display:inline;
+        }
+
+        .a{
+            align-self:center;
+        }
+        label{
+            display:inline-block;
+            width:100px;
+            text-align:center;
+        }
+        .label2{
+            display:inline-block;
+            width:200px;
+            text-align:center;
+        }
+        table{
+            border-style:inset;
+            border-width:thick;
+            border-color:gray;
+            border-width:15px;
+        }
+
+        .text{
+            width:50%;
+            margin:.1em;
+        }
+        .text2{
+            margin:.1em;
+            margin-right:31.25em;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body class="special" onload="processPage()">
+    <h1 id="title">Enter Customer Info Below</h1>
+
+    <form action="http://localhost:8090/Final.php?XDEBUG_SESSION_START=test2" method="post" enctype="multipart/form-data">
+        <div class="special2" align="center">
+           <label> First Name</label><input class="text" type="text"  name="name_first" required="required" pattern="[A-Z][a-z]{1,}| " title="Please match the requested formats"/><br />
+           <label>Last Name</label><input  class="text"type="text" name="name_last" required="required" pattern="[A-Z][a-z]{1,}| " title="Please enter your last name"/><br />
+           <label>Email</label><input  class="text" type="text" name="email" required="required" pattern="[\w-]+@([\w-]+\.)+[\w-]+"title="Please enter your email"/><br />
+           <label>Address1</label><input  class="text" type="text" name="address1" required="required"/><br />
+           <label>Address2</label><input class="text" type="text" name="address2"/> <br />
+           <label>City</label><input class="text2" type="text" name="city" required="required" pattern="[A-Z][a-z]{1,}|" title="Enter City"/> <br />
+           <label>State</label><input class="text2" type="text" name="state" required="required" pattern="[A-Z]{2}" title="Enter State"/> <br />
+           <label>ZIP</label><input class="text2" type="text" name="zip" required="required" pattern="[0-9]{5}" title="Enter a 5 digit Zip Code"/> <br />
+           <label>Country</label><input class="text" type="text" name="country" required="required" pattern="[A-Z][a-z]{1,}" title="Enter Country"/><br />
+           <label>Phone</label><input  class="text" type="text" name="phone" required="required" pattern="(?[0-9]{3})?-?[0-9]{3}-?[0-9]{4}" title="Enter your phone number"/><br />
+           <label>Fax</label><input  class="text" type="text" name="fax"/> <br />
+ 
+            <input type="checkBox" name="mailing" align="center"/>  Check here to be added to the mailing list
+            <h2>Shopping Cart</h2>
+            <table align="center" id="table" border="1">
+
+            </table>
+
+            <h2>Enter Credit Card Information Below</h2>
+
+            <input  type="radio" name="credit" required/> <img src="images/mc.jpg" width="80px" height="50px" /><br />
+            <input type="radio" name="credit" /><img src="images/visa.jpg"width="80px" height="50px" /><br />
+            <input type="radio" name="credit" /><img src="images/amex.jpg" width="80px" height="50px"/><br />
+            <input type="radio" name="credit" /><img src="images/discover.jpg" width="80px" height="50px"/><br />
+
+            <h3>Enter Credit Number and Exiperation</h3>
+
+            <label class="label2">Credit Card Number</label><input type="text" id="number" name="cc" required pattern="[0-9]{16}" title="Enter Your Card Number" onchange="validation()"/><br />
+            <label class="label2">Expiration Month</label><select name="month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+
+            </select> <br />
+
+            <label class="label2">Expiration Year</label><select name="year">
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+            </select> <br />
+
+            <input type="submit" value="Buy Now!" />
+            <input type="submit" value="Reset" /> <br />
+
+            <a href="store_index.html">Return to Previous</a>
+
+            
+        </div>
+    </form>
+   
+
+    
+</body>
+</html>

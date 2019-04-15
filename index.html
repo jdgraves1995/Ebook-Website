@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="JavaScript.js"></script>
+    <title></title>
+    <style>
+        .special{
+            background-color: #b8b8b8;
+            height: 141px;
+        }
+        .parent{
+            width:100%;
+            text-align:center;
+        }
+
+        .edit{
+            border-bottom-style:solid;
+            border-bottom-color:black;
+            border-bottom-width:thick;
+            width:100%;
+            height:100px;
+        }
+
+        .div1{
+            vertical-align:top;
+            height:142px;
+            max-width:100%; 
+            margin: 0 auto;
+        }
+
+        .div2{
+            height: 30px;
+            width: 685px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top:10px;
+        }
+
+        .div3{
+            float:left;
+            height:619px;
+            width:289px;
+            background-color:#b8b8b8;
+            margin-top:50px;
+            border-color:#c5c5c5;
+            border-style:inset;
+            border-width:thick;
+        }
+
+        .div4{
+            display:inline-block;
+            margin-right:75px;
+            height:600px;
+            width:450px;
+            background-color:#b8b8b8;
+            border-color:#c5c5c5;
+            border-style:inset;
+            border-width:thick;
+            margin-top:50px;
+        }
+
+        .div5{
+            float:right;
+            margin-top:50px;
+            height:619px;
+            width:200px;
+            background-color:white;
+            border-color:#c5c5c5;
+            border-style:inset;
+            border-width:thick;
+        }
+        .img{
+            margin-top:30px;
+        }
+
+        table.style{
+            border-style: inset;
+            border-color: #ff7218;
+            border-width: thick;
+            height: 100px;
+            align-self: center;
+            width: 1525px;
+            border-spacing: 2px;
+            margin:0 auto;
+        }
+        table.style1{
+            background-color:#b8b8b8;
+            border-style:inset; 
+            border-width:thick;
+            border-color:#d6c3c3;
+            resize:none;
+        }
+        .auto-style1 {
+            padding-left:50px;
+            width: 350px;
+        }
+        .autp-style2{
+            font-family: "Script MT Bold";
+            font-size: 40px;
+            padding-left:250px;
+            padding-right:150px;
+        }
+        .auto-style3{
+           padding-left:120px;
+        }
+        .dropdown{
+        
+            position:relative;
+            display:inline-block;
+            padding-left:7px;
+            padding-right:7px;
+            align-content:center;
+        }
+        .dropdownbtn{
+            height: 35px;
+        }
+        .dropdowncontent{
+            display:none;
+            position: absolute;
+            border-style:solid;
+            border-color:black;
+            border-width:thin;
+            border-bottom:solid;
+            border-bottom-color:black;
+            border-bottom-width:thin;
+            background-color: #808080;
+        }
+        .dropdowncontent a{
+            color:black;
+            padding: 1px 1px;
+            display:block;
+        }
+
+        .dropdowncontent a:hover{background-color: #d6c3c3;}
+
+        .dropdown:hover .dropdowncontent{display:block;}
+
+        .dropdown:hover .dropdownbtn{background-color:#808080;}
+
+        
+    </style>
+</head>
+<body class ="special" onload="effects()">
+    <div class ="div1">
+        <table class="style">
+            <tr>
+                <td class="auto-style1"><img src="images/logo.png" /></td>
+                <td class="autp-style2">Balanced <br /> Living - a <br /> Lifestyle!</td>
+                <td class="auto-style3"><img src="images/healthHeader2.png" /></td>
+            </tr>
+        </table>
+
+    </div> <br />
+
+    <div class="div2">
+        <table class="style1">
+            <tr>
+                <td><div class="dropdown">
+                    About Us
+                    <div class="dropdowncontent">
+                    <a>General</a>
+                    <a>Message</a>
+                    </div>
+                </div></td>
+                <td><div class="dropdown">
+                    Products
+                    <div class="dropdowncontent">
+                    <a href="store_index.html">Ebooks</a>
+                    <a>Fitness</a>
+                    </div>
+                </div></td>
+                <td><div class="dropdown">
+                    Fitness Centers
+                    <div class="dropdowncontent">
+                    <a>Anytime</a>
+                    <a>Conway Regional</a>
+                    </div>
+                </div></td>
+                 <td><div class="dropdown">
+                    Equipment
+                    <div class="dropdowncontent">
+                    <a>Total Gym</a>
+                    <a>Bow-Flex</a>
+                    </div>
+                </div></td>
+                 <td><div class="dropdown">
+                    Resturants
+                    <div class="dropdowncontent">
+                    <a>Healthy Dining</a>
+                    <a>Organic Foods</a>
+                    <a>All Veggies</a>
+                    </div>
+                </div></td>
+                 <td><div class="dropdown">
+                    Members
+                    <div class="dropdowncontent">
+                    <a>Login</a>
+                    <a>Reset Password</a>
+                    <a>Membership</a>
+                    </div>
+                </div></td>
+                 <td><div class="dropdown">
+                    Visitors
+                    <div class="dropdowncontent">
+                    <a>Registration</a>
+                    <a>Festival Pictures</a>
+                    <a href="blogs.php">Blogs</a>
+                    </div>
+                </div></td>
+                 <td><div class="dropdown">
+                    Contact Us
+                    <div class="dropdowncontent">
+                    <a>Our Store</a>
+                    <a>Other Vendors</a>
+                    </div>
+                </div></td>
+            </tr>
+        </table>
+
+    </div><br />
+
+    <div class="parent">
+    <div class="div3">
+        <img src="images/healthHeader3.jpg" style="width: 289px" />
+        <img class=img src="images/healthHeader4a.jpg" style="width: 289px; height: 179px;" />
+        <img src="images/recipes.jpg" style="width: 289px; height:179px; margin-top: 50px"/>
+    </div>
+    <div class="div4">
+        <h1>Mission Statement</h1>
+        <p>The Balance-Living Organization is completely committed to assisting you to a full and balanced lifestyle. Members have access to our knowledgeable advisors and trainers for assistance pertaining to health, fitness, parenting, financial and technical programming guidance. Our members our among the most successful and well balanced professionals, and we can do the same for you! Come join us and become Well Balanced Now!</p>
+        <img id="pic1" src="images/0.png" style="width:98%; height:50%;"/>
+        <p id ="javaLabel" align="center" style="color:black;" >Weights</p>
+    </div>
+    <div class="div5">
+        <div class="edit">
+            <h1 style="font-size:16pt">Office Hours</h1>
+            <p>Mon-Fri 8:00am - 5:00pm</p>
+        </div>
+        <div class="edit">
+            <h1 style="font-size:16pt">Address</h1>
+            <p>2312 Front Street</p>
+            <p>Conway, Arkansas 72035</p>
+        </div>
+        <div class="edit">
+            <h1 style="font-size:16pt">Contact Us</h1>
+            <p>John Levine</p>
+            <p>501-350-3291</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
