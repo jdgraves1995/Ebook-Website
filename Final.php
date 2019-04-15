@@ -76,6 +76,7 @@ if(count($_POST) > 0)
 
     $connection->close();
 	
+	/*This was an attempt to delete a cookie, it sadly did not work*/
 	setcookie('key', "", time() - 3600);
 
     header("Location: index.html");
