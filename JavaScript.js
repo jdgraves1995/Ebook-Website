@@ -254,3 +254,86 @@ function fadeIn() {
     //Set time out
     timer = setTimeout("fadeIn()", 25);
 }
+
+function appear() {
+    document.getElementById('innerCreate').style.display = "block";
+    document.getElementById('createButton').style.display = "none";
+}
+
+var req;
+
+
+function verifyLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    var url = "http://localhost:8090/Validation.php?username=" + username + "&password="+password+"&desc=login&XDEBUG_SESSION_START=test";
+    req = new XMLHttpRequest();
+    req.onload = function () {
+        document.getElementById('label5').innerHTML = req.responseText;
+    };
+    req.open("GET", url, true);
+    req.send();
+
+}
+
+function verifyLogin2() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    var url = "http://localhost:8090/createData.php?username=" + username + "&password=" + password + "&desc=login&XDEBUG_SESSION_START=test";
+    req = new XMLHttpRequest();
+    req.onload = function () {
+        document.getElementById('label6').innerHTML = req.responseText;
+    };
+    req.open("GET", url, true);
+    req.send();
+}
+
+
+
+function verifyCreate() {
+
+    var username = document.getElementById('createUsername').value;
+    var url = "http://localhost:8090/Validation.php?username=" + username + "&XDEBUG_SESSION_START=test";
+    req = new XMLHttpRequest();
+    req.onload = function() {
+        document.getElementById('label1').innerHTML = req.responseText; 
+    };
+    req.open("GET", url, true);
+    req.send();
+}
+
+function checkPasswords() {
+    var password = document.getElementById('createPassword').value;
+    var verifyPass = document.getElementById('retype').value;
+    if (password != verifyPass) {
+        document.getElementById('label3').innerHTML = "Password Must Match!"; 
+    }
+}
+
+function verifyPassword() {
+    var password = document.getElementById('createPassword').value;
+    if (password.length < 6 || password.length > 16) {
+        document.getElementById('label2').innerHTML = "Invalid Password. It must be 6 to 16 characters and hold 1 numeric value.";
+    }
+}
+
+function createData() {
+    var username = document.getElementById('createUsername').value;
+    var password = document.getElementById('createPassword').value;
+    var email = document.getElementById('email').value;
+    var url = "http://localhost:8090/createData.php?username=" + username + "&password=" + password + "&email=" + email;
+    req.onload = function () {
+
+        document.getElementById('login').style.display = "block";
+        document.getElementById('createNow').style.display = "none";
+    };
+    req.open("GET", url, true);
+    req.send();
+
+}
+
+function appear2() {
+    window.location.href = "membersLogin.html";
+}

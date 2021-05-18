@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<head>
+    <script type="text/javascript" src="JavaScript.js"></script>
+    <title></title>
+    <style>
+        .titleDiv {
+            height: 10em;
+            width: 99%;
+            border: solid;
+            border-width: thick;
+            border-color: black;
+        }
+
+        .loginDiv {
+            height: 30em;
+            width: 49.5%;
+            border: solid;
+            border-width: thick;
+            border-top-width: thin;
+            border-right-width: thin;
+            border-color: black;
+            float: left;
+        }
+
+        .createAccountDiv {
+            height: 30em;
+            width: 49%;
+            border: solid;
+            border-width: thick;
+            border-top-width: thin;
+            border-color: black;
+            float: left;
+        }
+
+        .innerDiv {
+            width: 99.5%;
+            height: 80%;
+        }
+
+        .labelText{
+           color:red;
+        }
+    </style>
+</head>
+<body>
+    <form name="myForm">
+        <div class="titleDiv">
+            <h1 align="center">Account Login/Creation</h1>
+            <p align="center">Members recieve a monthly newsletter and email alerts on upcoming events</p>
+        </div>
+        <div class="loginDiv">
+            <h3 align="center">Current Members enter your username and password</h3>
+            <br />
+            <br />
+            <p>Username:</p>
+            <input type="text" id="username" onchange="verifyLogin()"/> <label class="labelText" id="label5"></label>
+            <br />
+            <br />
+            <p>Password:</p>
+            <input type="text" id="password" onchange="verifyLogin2()" /><label class="labelText" id="label6"></label>
+            <br />
+            <br />
+            <input type="button" value="Login" id="LoginButton" onclick="appear2()" />
+        </div>
+        <div class="createAccountDiv">
+            <h3 align="center">Not a Memeber? Create your Account for Free Now!!</h3>
+            <br />
+            <br />
+            <div class="innerDiv" id="innerCreate" style="display:none;">
+                <h2>Create New Account Below</h2>
+                <p>Username: (Must be at least 6 characters in length)</p>
+                <input type="text"  id="createUsername" required="required" pattern="([a-z]|[A-Z]|[0-9]){6,16}" title="Username is 6 to 16 characters in length" onchange="verifyCreate()" /><label class="labelText" id="label1">&nbsp;</label>
+                <br />
+                <p>Password: (Must be at least 6 characters in length. Requires 1 number.)</p>
+                <input type="text" id="createPassword" required="required" pattern="([a-z]|[A-Z]|[0-9]){6,16}" title="Password is 6 to 16 characters in length containing 1 number" onchange="verifyPassword()"/><label class="labelText" id="label2">&nbsp;</label>
+                <br />
+                <p>Re-Enter Password:</p>
+                <input type="text" id="retype" required="required" onchange="checkPasswords()"/> <label class="labelText" id="label3"></label>
+                <br />
+                <p>Email:</p>
+                <input type="text" id="email" required="required" pattern="[\w-]+@([\w-]+\.)+[\w-]+" title="Please enter an email" />
+                <br />
+                <input type="button" id="login" value="Login Now" style="display:none;" onclick="appear2()"/>
+                <input type="button" id="createNow" value="Create Account" onclick="createData()"  />
+            </div>
+            
+            <input type="button" value="CREAT ACCOUNT" id="createButton" style="display:block;" onclick="appear()" />
+
+        </div>
+    </form>
+</body>
+</html>
